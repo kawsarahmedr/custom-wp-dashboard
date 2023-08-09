@@ -2,12 +2,12 @@
 /**
  * Plugin Name: Custom WordPress Welcome Admin Dashboard
  * Plugin URI: https://gist.github.com/wpfresher/8d3680d4d9d6d86f22f7f6cb1662ab1a
- * Description: This plugin will replaces the default WordPress admin dashboard with a new custom menu page. It works when the user has 'Read' capability & do not has no 'Manage_Options' capability
+ * Description: This plugin will replace the default WordPress admin dashboard with a new custom menu page. It works when the user has a 'Read' capability & does not has a 'Manage_Options' capability
  * Version: 1.0.0
  * Author: Kawsar Ahmed
- * Author URI: http://urldev.com/
+ * Author URI: http://wpfresher.com/
  * Developer: Kawsar Ahmed
- * Developer URI: http://urldev.com/
+ * Developer URI: http://wpfresher.com/
  * Contributors: Kawsar Ahmed
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,7 +23,7 @@
  * Alternatively, if you're not familiar with object-oriented programming, you can modify the set_the_title() and page_content_callback_fn() functions according to your requirements.
  *
  * Modify the user redirection to the custom dashboard by adjusting the capability property for specific users.
- * And add the capability property if you want to remove this custom dashboard and back to the default wordpress dashboard
+ * And add the capability property if you want to remove this custom dashboard and back to the default WordPress dashboard
  *
  * Remember: To ensure the uninterrupted functionality of this plugin, simply place this file into the "mu-plugins" folder within the "wp-content" directory.
  * If the "mu-plugins" folder is not present, you can easily create one yourself.
@@ -35,7 +35,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Custom Wordpress Welcome Admin Dashboard
+ * Custom WordPress Welcome Admin Dashboard
  * Class executes when the user has 'Read' capability
  * Not execute when the user has no 'Manage_Options' capability
  * 
@@ -50,7 +50,7 @@ class Custom_WP_Dashboard {
     protected $title;
 
     /**
-     * Here "final" prefix used, It's because we do not want to override this methods by other sub classes or sub methods
+     * Here "final" prefix is used, It's because we do not want to override these methods by other sub-classes or sub methods
      */
     final public function __construct() {
 
@@ -103,8 +103,8 @@ class Custom_WP_Dashboard {
     }
 
     /**
-     * Adding custom menu page
-     * Removing the wordpress default Dashboard menu page
+     * Adding a custom menu page
+     * Removing the WordPress default Dashboard menu page
      * 
      * @since version 1.0.0
      */
@@ -119,7 +119,7 @@ class Custom_WP_Dashboard {
         add_menu_page( $this->title, $this->menu_page_name, $this->capability, $this->menu_page_slug, array( $this, 'page_content_callback_fn' ), 'dashicons-dashboard', 0);
 
         /**
-         * Remove the Wordpress default Dashboard menu page
+         * Remove the WordPress default Dashboard menu page
          * 
          * @since version 1.0.0
          * @reference https://developer.wordpress.org/reference/functions/remove_menu_page/
@@ -151,7 +151,7 @@ class Custom_WP_Dashboard {
     }
 
     /**
-     * Redirect users from the Wordpress default welcome dashboard to your custom dashboard
+     * Redirect users from the WordPress default welcome dashboard to your custom dashboard
      * 
      * @since version 1.0.0
      */
@@ -168,7 +168,7 @@ class Custom_WP_Dashboard {
 }
 
 /**
- * Custom Wordpress Welcome Admin Dashboard
+ * Custom WordPress Welcome Admin Dashboard
  * Class executes when the user has 'Read' capability
  * Not execute when the user has no 'Manage_Options' capability
  * 
