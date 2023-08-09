@@ -1,3 +1,4 @@
+# Custom WordPress Welcome Admin Dashboard - WordPress Plugin
 /**
  * Plugin Name: Custom WordPress Welcome Admin Dashboard
  * Plugin URI: https://gist.github.com/wpfresher/8d3680d4d9d6d86f22f7f6cb1662ab1a
@@ -28,5 +29,5 @@
  * If the "mu-plugins" folder is not present, you can easily create one yourself.
  */
 
-# custom-wp-dashboard
+# custom-wp-admin-dashboard
 The Custom WordPress Welcome Admin Dashboard plugin will replace the default WordPress admin dashboard with a new custom menu page. It works when the user has a 'Read' capability &amp; does not has a 'Manage_Options' capability
